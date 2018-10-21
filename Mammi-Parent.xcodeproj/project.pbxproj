@@ -8,22 +8,66 @@
 
 /* Begin PBXBuildFile section */
 		160EC692216BD1840099F149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EC691216BD1840099F149 /* AppDelegate.swift */; };
-		160EC694216BD1840099F149 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EC693216BD1840099F149 /* FirstViewController.swift */; };
+		160EC694216BD1840099F149 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EC693216BD1840099F149 /* HomeViewController.swift */; };
 		160EC696216BD1840099F149 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EC695216BD1840099F149 /* SecondViewController.swift */; };
 		160EC699216BD1840099F149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160EC697216BD1840099F149 /* Main.storyboard */; };
 		160EC69B216BD1840099F149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160EC69A216BD1840099F149 /* Assets.xcassets */; };
 		160EC69E216BD1840099F149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160EC69C216BD1840099F149 /* LaunchScreen.storyboard */; };
+		160EC6A7216BD86E0099F149 /* RemachineScript_Personal_Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 160EC6A6216BD86D0099F149 /* RemachineScript_Personal_Use.ttf */; };
+		16188C0D216BF71300699F3D /* RoundedShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16188C0C216BF71300699F3D /* RoundedShapes.swift */; };
+		161CD6A12177681C00146E3D /* TheEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CD6A02177681C00146E3D /* TheEventViewController.swift */; };
+		1654FC6E217C8B17004C3582 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC6D217C8B17004C3582 /* AlbumCollectionViewCell.swift */; };
+		1654FC70217C9313004C3582 /* AlbumsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC6F217C9313004C3582 /* AlbumsCollectionViewController.swift */; };
+		1654FC72217C99C4004C3582 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC71217C99C4004C3582 /* FolderModel.swift */; };
+		1654FC74217CCF7D004C3582 /* FullImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC73217CCF7D004C3582 /* FullImageCollectionViewController.swift */; };
+		1654FC76217CD115004C3582 /* AlbumPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC75217CD115004C3582 /* AlbumPhotosCollectionViewController.swift */; };
+		1654FC78217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC77217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift */; };
+		165D6AB421714B1700BDE83A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 165D6AB321714B1600BDE83A /* SWRevealViewController.m */; };
+		16A29397216CAAF700DFA3C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A29396216CAAF700DFA3C6 /* LoginViewController.swift */; };
+		16A29399216CC0C900DFA3C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A29398216CC0C900DFA3C6 /* UserModel.swift */; };
+		16BE4888217279C200F0F492 /* RevealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE4887217279C200F0F492 /* RevealTableViewController.swift */; };
+		16BE488A21727B5400F0F492 /* ChildModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE488921727B5400F0F492 /* ChildModel.swift */; };
+		16E7D3C72175FC57000FE7F7 /* RoundedImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E7D3C62175FC57000FE7F7 /* RoundedImages.swift */; };
+		16E7D3C921760941000FE7F7 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E7D3C821760941000FE7F7 /* EventsTableViewController.swift */; };
+		16E7D3CB21760989000FE7F7 /* TheEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E7D3CA21760989000FE7F7 /* TheEventTableViewCell.swift */; };
+		16E7D3CD21760CFA000FE7F7 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E7D3CC21760CF9000FE7F7 /* EventModel.swift */; };
+		16F45A79217262DC000707D8 /* MyChildrenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F45A78217262DC000707D8 /* MyChildrenTableViewCell.swift */; };
+		8F833560AD65B0417EBAC3C6 /* Pods_Mammi_Parent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D1403569DF06E69995F4B8 /* Pods_Mammi_Parent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08F37A56336DB0563CDC21AD /* Pods-Mammi-Parent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mammi-Parent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mammi-Parent/Pods-Mammi-Parent.release.xcconfig"; sourceTree = "<group>"; };
 		160EC68E216BD1840099F149 /* Mammi-Parent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mammi-Parent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		160EC691216BD1840099F149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		160EC693216BD1840099F149 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		160EC693216BD1840099F149 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		160EC695216BD1840099F149 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		160EC698216BD1840099F149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		160EC69A216BD1840099F149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		160EC69D216BD1840099F149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		160EC69F216BD1840099F149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		160EC6A6216BD86D0099F149 /* RemachineScript_Personal_Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RemachineScript_Personal_Use.ttf; path = ../../../../Downloads/remachine_script/RemachineScript_Personal_Use.ttf; sourceTree = "<group>"; };
+		16188C0C216BF71300699F3D /* RoundedShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShapes.swift; sourceTree = "<group>"; };
+		161CD6A02177681C00146E3D /* TheEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheEventViewController.swift; sourceTree = "<group>"; };
+		1654FC6D217C8B17004C3582 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		1654FC6F217C9313004C3582 /* AlbumsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCollectionViewController.swift; sourceTree = "<group>"; };
+		1654FC71217C99C4004C3582 /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
+		1654FC73217CCF7D004C3582 /* FullImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageCollectionViewController.swift; sourceTree = "<group>"; };
+		1654FC75217CD115004C3582 /* AlbumPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		1654FC77217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		165D6AB121714B1200BDE83A /* Mammi-Parent-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mammi-Parent-Bridging-Header.h"; sourceTree = "<group>"; };
+		165D6AB221714B1600BDE83A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../SWRevealViewController.h; sourceTree = "<group>"; };
+		165D6AB321714B1600BDE83A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../SWRevealViewController.m; sourceTree = "<group>"; };
+		16A29396216CAAF700DFA3C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		16A29398216CC0C900DFA3C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		16BE4887217279C200F0F492 /* RevealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealTableViewController.swift; sourceTree = "<group>"; };
+		16BE488921727B5400F0F492 /* ChildModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildModel.swift; sourceTree = "<group>"; };
+		16E7D3C62175FC57000FE7F7 /* RoundedImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImages.swift; sourceTree = "<group>"; };
+		16E7D3C821760941000FE7F7 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		16E7D3CA21760989000FE7F7 /* TheEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheEventTableViewCell.swift; sourceTree = "<group>"; };
+		16E7D3CC21760CF9000FE7F7 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		16F45A78217262DC000707D8 /* MyChildrenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChildrenTableViewCell.swift; sourceTree = "<group>"; };
+		C0D1403569DF06E69995F4B8 /* Pods_Mammi_Parent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mammi_Parent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8DDB68E373E8107DA2B2CD7 /* Pods-Mammi-Parent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mammi-Parent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mammi-Parent/Pods-Mammi-Parent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F833560AD65B0417EBAC3C6 /* Pods_Mammi_Parent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +87,8 @@
 			children = (
 				160EC690216BD1840099F149 /* Mammi-Parent */,
 				160EC68F216BD1840099F149 /* Products */,
+				D1C1BFE115693C6091BA20D7 /* Pods */,
+				1F52B3DC9A3D80929C1CA77C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +103,93 @@
 		160EC690216BD1840099F149 /* Mammi-Parent */ = {
 			isa = PBXGroup;
 			children = (
+				165D6AB021714AC900BDE83A /* SWReavealMenu */,
+				16188C0B216BF6D900699F3D /* Model */,
+				16188C0A216BF6CD00699F3D /* View */,
+				16188C09216BF6B000699F3D /* Controller */,
+				160EC6A5216BD8380099F149 /* Font */,
 				160EC691216BD1840099F149 /* AppDelegate.swift */,
-				160EC693216BD1840099F149 /* FirstViewController.swift */,
-				160EC695216BD1840099F149 /* SecondViewController.swift */,
 				160EC697216BD1840099F149 /* Main.storyboard */,
 				160EC69A216BD1840099F149 /* Assets.xcassets */,
 				160EC69C216BD1840099F149 /* LaunchScreen.storyboard */,
 				160EC69F216BD1840099F149 /* Info.plist */,
 			);
 			path = "Mammi-Parent";
+			sourceTree = "<group>";
+		};
+		160EC6A5216BD8380099F149 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				160EC6A6216BD86D0099F149 /* RemachineScript_Personal_Use.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		16188C09216BF6B000699F3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				160EC693216BD1840099F149 /* HomeViewController.swift */,
+				160EC695216BD1840099F149 /* SecondViewController.swift */,
+				16A29396216CAAF700DFA3C6 /* LoginViewController.swift */,
+				16BE4887217279C200F0F492 /* RevealTableViewController.swift */,
+				16E7D3C821760941000FE7F7 /* EventsTableViewController.swift */,
+				161CD6A02177681C00146E3D /* TheEventViewController.swift */,
+				1654FC6F217C9313004C3582 /* AlbumsCollectionViewController.swift */,
+				1654FC75217CD115004C3582 /* AlbumPhotosCollectionViewController.swift */,
+				1654FC73217CCF7D004C3582 /* FullImageCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		16188C0A216BF6CD00699F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16188C0C216BF71300699F3D /* RoundedShapes.swift */,
+				16F45A78217262DC000707D8 /* MyChildrenTableViewCell.swift */,
+				16E7D3C62175FC57000FE7F7 /* RoundedImages.swift */,
+				16E7D3CA21760989000FE7F7 /* TheEventTableViewCell.swift */,
+				1654FC6D217C8B17004C3582 /* AlbumCollectionViewCell.swift */,
+				1654FC77217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16188C0B216BF6D900699F3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16A29398216CC0C900DFA3C6 /* UserModel.swift */,
+				16BE488921727B5400F0F492 /* ChildModel.swift */,
+				16E7D3CC21760CF9000FE7F7 /* EventModel.swift */,
+				1654FC71217C99C4004C3582 /* FolderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		165D6AB021714AC900BDE83A /* SWReavealMenu */ = {
+			isa = PBXGroup;
+			children = (
+				165D6AB221714B1600BDE83A /* SWRevealViewController.h */,
+				165D6AB321714B1600BDE83A /* SWRevealViewController.m */,
+				165D6AB121714B1200BDE83A /* Mammi-Parent-Bridging-Header.h */,
+			);
+			path = SWReavealMenu;
+			sourceTree = "<group>";
+		};
+		1F52B3DC9A3D80929C1CA77C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0D1403569DF06E69995F4B8 /* Pods_Mammi_Parent.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1C1BFE115693C6091BA20D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8DDB68E373E8107DA2B2CD7 /* Pods-Mammi-Parent.debug.xcconfig */,
+				08F37A56336DB0563CDC21AD /* Pods-Mammi-Parent.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 160EC6A2216BD1840099F149 /* Build configuration list for PBXNativeTarget "Mammi-Parent" */;
 			buildPhases = (
+				F156125205F97927949D7CC5 /* [CP] Check Pods Manifest.lock */,
 				160EC68A216BD1840099F149 /* Sources */,
 				160EC68B216BD1840099F149 /* Frameworks */,
 				160EC68C216BD1840099F149 /* Resources */,
+				F55030BDE03717CA3346E81C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +226,7 @@
 				TargetAttributes = {
 					160EC68D216BD1840099F149 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160EC6A7216BD86E0099F149 /* RemachineScript_Personal_Use.ttf in Resources */,
 				160EC69E216BD1840099F149 /* LaunchScreen.storyboard in Resources */,
 				160EC69B216BD1840099F149 /* Assets.xcassets in Resources */,
 				160EC699216BD1840099F149 /* Main.storyboard in Resources */,
@@ -134,14 +263,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F156125205F97927949D7CC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mammi-Parent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F55030BDE03717CA3346E81C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mammi-Parent/Pods-Mammi-Parent-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mammi-Parent/Pods-Mammi-Parent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		160EC68A216BD1840099F149 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1654FC78217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift in Sources */,
 				160EC696216BD1840099F149 /* SecondViewController.swift in Sources */,
+				16E7D3CB21760989000FE7F7 /* TheEventTableViewCell.swift in Sources */,
 				160EC692216BD1840099F149 /* AppDelegate.swift in Sources */,
-				160EC694216BD1840099F149 /* FirstViewController.swift in Sources */,
+				161CD6A12177681C00146E3D /* TheEventViewController.swift in Sources */,
+				16E7D3C921760941000FE7F7 /* EventsTableViewController.swift in Sources */,
+				1654FC6E217C8B17004C3582 /* AlbumCollectionViewCell.swift in Sources */,
+				16E7D3CD21760CFA000FE7F7 /* EventModel.swift in Sources */,
+				165D6AB421714B1700BDE83A /* SWRevealViewController.m in Sources */,
+				16E7D3C72175FC57000FE7F7 /* RoundedImages.swift in Sources */,
+				1654FC76217CD115004C3582 /* AlbumPhotosCollectionViewController.swift in Sources */,
+				1654FC74217CCF7D004C3582 /* FullImageCollectionViewController.swift in Sources */,
+				160EC694216BD1840099F149 /* HomeViewController.swift in Sources */,
+				1654FC70217C9313004C3582 /* AlbumsCollectionViewController.swift in Sources */,
+				16A29397216CAAF700DFA3C6 /* LoginViewController.swift in Sources */,
+				16BE4888217279C200F0F492 /* RevealTableViewController.swift in Sources */,
+				1654FC72217C99C4004C3582 /* FolderModel.swift in Sources */,
+				16A29399216CC0C900DFA3C6 /* UserModel.swift in Sources */,
+				16F45A79217262DC000707D8 /* MyChildrenTableViewCell.swift in Sources */,
+				16BE488A21727B5400F0F492 /* ChildModel.swift in Sources */,
+				16188C0D216BF71300699F3D /* RoundedShapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,13 +466,17 @@
 		};
 		160EC6A3216BD1840099F149 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8DDB68E373E8107DA2B2CD7 /* Pods-Mammi-Parent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Mammi-Parent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hamza.Solutions.Mammi-Parent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mammi-Parent/SWReavealMenu/Mammi-Parent-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,13 +484,16 @@
 		};
 		160EC6A4216BD1840099F149 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F37A56336DB0563CDC21AD /* Pods-Mammi-Parent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Mammi-Parent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hamza.Solutions.Mammi-Parent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mammi-Parent/SWReavealMenu/Mammi-Parent-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
