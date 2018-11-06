@@ -10,56 +10,40 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-private let reuseIdentifier = "Cell"
-
-class AlbumPhotosCollectionViewController: UICollectionViewController {
+class AlbumPhotosCollectionViewController: UICollectionViewController , UICollectionViewDelegateFlowLayout {
+    
+    private let reuseIdentifier = "AlbumPhotosCell"
     
     var CurrentAlbumID = Int()
     var AlbumPhotos = [UIImage]()
     var testimgesArray = [[String:AnyObject]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
+         self.DawnloadimagesWithAlamofire()
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "RemachineScriptPersonalUse", size: 28 )!]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.strokeColor : #colorLiteral(red: 1, green: 0.4412012994, blue: 0.4056814313, alpha: 1) ]
+        
+        
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return AlbumPhotos.count
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? AlbumPhotoCollectionViewCell
     
-        cell?.ImageViewAlbumPhoto.image = AlbumPhotos[indexPath.row]
-    
-        return cell !
-    }
     func DawnloadImage(url : String) -> UIImage   {
         
         let url = URL(string: url)
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         return UIImage(data: data!)!
     }
-
+    
     func DawnloadimagesWithAlamofire(){
         
         
@@ -83,19 +67,68 @@ class AlbumPhotosCollectionViewController: UICollectionViewController {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 if let resData = swiftyJsonVar["data"].arrayObject {
                     self.testimgesArray = resData as! [[String:AnyObject]]
-                    
+           
                     for NextImages in self.testimgesArray {
-                        self.AlbumPhotos.append( self.DawnloadImage(url:
-                            (NextImages["imgs"] as? String)!))
-         
+                        self.AlbumPhotos.append(
+                            self.DawnloadImage(url:
+                                (NextImages["imgs"] as? String)!) )
+                        print(self.AlbumPhotos)
                     }
-                    DispatchQueue.main.async {
-                        self.collectionView?.reloadData()
-                    }
+                    self.collectionView?.reloadData()
                 }
             }
         }
     }
+
+    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let LeftAndRightPadding : CGFloat = 2.0
+        let FullWidth = collectionView.frame.width
+        var ItemSize = CGSize(width: (FullWidth - LeftAndRightPadding)  , height: (FullWidth - LeftAndRightPadding) )
+        if Double(FullWidth) <= 400.0{
+            ItemSize =  CGSize(width: (FullWidth - LeftAndRightPadding)/2.0 , height: (FullWidth - LeftAndRightPadding)/2.0 )
+            
+        }else if Double(FullWidth) > 400.0 {
+            ItemSize =  CGSize(width: (FullWidth - LeftAndRightPadding)/3.0 , height: (FullWidth - LeftAndRightPadding)/3.0 )
+        }
+        return ItemSize
+    }
+    
+    
+    
+
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+      
+        return 1
+    }
+
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return AlbumPhotos.count
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? AlbumPhotoCollectionViewCell
+        
+        if self.AlbumPhotos.isEmpty{
+            self.collectionView?.reloadData()
+        } else {
+            self.collectionView?.layoutIfNeeded()
+            cell!.ImageViewAlbumPhoto.image = AlbumPhotos[indexPath.row]
+            return cell!
+        }
+        return cell! 
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let FullImageVC = FullImageViewController()
+        FullImageVC.SenderIndex = indexPath
+        FullImageVC.ImageArray = self.AlbumPhotos
+        self.navigationController?.pushViewController(FullImageVC, animated: true)
+    }
+    
 }
 
 

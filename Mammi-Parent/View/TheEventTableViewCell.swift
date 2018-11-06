@@ -15,7 +15,6 @@ class TheEventTableViewCell: UITableViewCell {
   
     @IBOutlet weak var TxtViewEventName: UITextField!
     @IBOutlet weak var TxtViewEventDesc: UITextView!
-  
     @IBOutlet weak var TxtViewEventCost: UITextField!
     
     

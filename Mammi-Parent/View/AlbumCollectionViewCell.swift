@@ -12,8 +12,8 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var ImgViewAlbumPhoto: UIImageView!
     @IBOutlet weak var TxtFieldAlbumTitle: UITextField!
-    
-    func GonfigureCell (Albumtitle : String , AlbumImage : UIImage){
+        
+    func ConfigureCell (Albumtitle : String , AlbumImage : UIImage){
         ImgViewAlbumPhoto.image = AlbumImage
         TxtFieldAlbumTitle.text = Albumtitle
         

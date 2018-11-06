@@ -15,18 +15,28 @@ class RevealTableViewController: UITableViewController  {
     var ChildrenArray = [Child]()
     var testChildrenArray =  [[String:AnyObject]]()
     var SelectedChildHadanaID = Int()
+    var CurrentChildName = String()
+    var CurrentChildPhoto = String()
+    var SelectedChild = Child(_name: "test" , _imgURL: "test", _hadanaID: 5, _hadanaName: "test", _childClass: "test")
     
+    func DawnloadImage(url : String) -> UIImage   {
+        
+        let url = URL(string: url)
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        return UIImage(data: data!)!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-      
-     GetChildrenWithAlamoFire()
+        //self.SelectedChild = ChildrenArray[0]
+        self.GetChildrenWithAlamoFire{ (complete) in
+            if complete {
+                self.SelectedChild = self.ChildrenArray[0]
+                let HomeVC = HomeViewController()
+                HomeVC.CheckGalleryWithAlamoFire()
+                }
+            }
     }
-    
-    
- 
- 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,33 +59,24 @@ class RevealTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyChildrenCell", for: indexPath) as? MyChildrenTableViewCell
         let CurrentChild = self.ChildrenArray[indexPath.row]
-        cell?.configurationTheCell(ChildName: CurrentChild.name , CHildPhoto: CurrentChild.img, ChildClass: CurrentChild.childClass , ChildHadana: CurrentChild.hadanaName)
+        cell?.configurationTheCell(ChildName: CurrentChild.name , CHildPhoto: self.DawnloadImage(url: CurrentChild.imgURL), ChildClass: CurrentChild.childClass , ChildHadana: CurrentChild.hadanaName)
         return cell!
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       let SelectedChild = ChildrenArray[indexPath.row]
-           SelectedChildHadanaID = SelectedChild.hadanaID
-        let prefs = UserDefaults.standard
-         prefs.removeObject(forKey: "CurrentHadana")
-       // keyValue = prefs.string(forKey: "CurrentHadana")
-        let CurrHadanaID = SelectedChildHadanaID
-       //  prefs.set(CurrHadanaID, forKey: "CurrentHadana")
-        UserDefaults.standard.set(CurrHadanaID, forKey: "CurrentHadana")
-        let HomeVC = HomeViewController()
-        HomeVC.CheckGalleryWithAlamoFire()
-    }
-    
-    func DawnloadImage(url : String) -> UIImage   {
+        let SelectedChild = ChildrenArray[indexPath.row]
         
-        let url = URL(string: url)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        return UIImage(data: data!)!
+        let prefs = UserDefaults.standard
+            prefs.removeObject(forKey: "CurrChild")
+        if let encoded = try? JSONEncoder().encode(SelectedChild) {
+        UserDefaults.standard.set(encoded, forKey: "CurrChild")
+      //  UserDefaults.standard.set(SelectedChild, forKey: "CurrChild")
+        
+        }
     }
     
-    
-    
-    func GetChildrenWithAlamoFire(){
+
+    func GetChildrenWithAlamoFire(completion: @escaping (_ complete: Bool) -> ()){
         
         let decoder = JSONDecoder()
         let _CurrentUser = UserDefaults.standard.data(forKey: "kUser")
@@ -107,18 +108,27 @@ class RevealTableViewController: UITableViewController  {
                    var NextChildClass =  NextChild["class"] as? Dictionary<String, AnyObject>
                     let RecivedChild = Child.init(
                           _name: NextChild["name"] as! String
-                        , _img: self.DawnloadImage(url: NextChild["img"] as! String)
+                        , _imgURL: NextChild["img"] as! String
                         , _hadanaID:  NextChildHadana!["id"] as! Int
                         , _hadanaName: NextChildHadana!["name"] as! String
                         , _childClass: NextChildClass!["name"] as! String
-                    )
+                                                    )
                         self.ChildrenArray.append(RecivedChild)
                         }
+                   
+                    let FirstSelectedChild = self.ChildrenArray[0]
+                    if let encoded = try? JSONEncoder().encode(FirstSelectedChild) {
+                        UserDefaults.standard.set(encoded, forKey: "CurrChild")
+                        //  UserDefaults.standard.set(SelectedChild, forKey: "CurrChild")
+                         completion(true)
+                    }
+                    
                     self.tableView.reloadData()
                 }
             }
         }
     }
 }
+
 
 

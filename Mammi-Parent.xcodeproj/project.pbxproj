@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1606789C218722B500645A58 /* ReportSubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606789B218722B500645A58 /* ReportSubjectTableViewCell.swift */; };
+		1606789E2187373C00645A58 /* PopUpPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606789D2187373C00645A58 /* PopUpPickerViewController.swift */; };
 		160EC692216BD1840099F149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EC691216BD1840099F149 /* AppDelegate.swift */; };
 		160EC694216BD1840099F149 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EC693216BD1840099F149 /* HomeViewController.swift */; };
 		160EC696216BD1840099F149 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EC695216BD1840099F149 /* SecondViewController.swift */; };
@@ -16,10 +18,11 @@
 		160EC6A7216BD86E0099F149 /* RemachineScript_Personal_Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 160EC6A6216BD86D0099F149 /* RemachineScript_Personal_Use.ttf */; };
 		16188C0D216BF71300699F3D /* RoundedShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16188C0C216BF71300699F3D /* RoundedShapes.swift */; };
 		161CD6A12177681C00146E3D /* TheEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CD6A02177681C00146E3D /* TheEventViewController.swift */; };
+		16306A5921860C5B00FD5DB2 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16306A5821860C5B00FD5DB2 /* ReportViewController.swift */; };
 		1654FC6E217C8B17004C3582 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC6D217C8B17004C3582 /* AlbumCollectionViewCell.swift */; };
 		1654FC70217C9313004C3582 /* AlbumsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC6F217C9313004C3582 /* AlbumsCollectionViewController.swift */; };
 		1654FC72217C99C4004C3582 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC71217C99C4004C3582 /* FolderModel.swift */; };
-		1654FC74217CCF7D004C3582 /* FullImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC73217CCF7D004C3582 /* FullImageCollectionViewController.swift */; };
+		1654FC74217CCF7D004C3582 /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC73217CCF7D004C3582 /* FullImageViewController.swift */; };
 		1654FC76217CD115004C3582 /* AlbumPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC75217CD115004C3582 /* AlbumPhotosCollectionViewController.swift */; };
 		1654FC78217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1654FC77217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift */; };
 		165D6AB421714B1700BDE83A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 165D6AB321714B1600BDE83A /* SWRevealViewController.m */; };
@@ -37,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		08F37A56336DB0563CDC21AD /* Pods-Mammi-Parent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mammi-Parent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mammi-Parent/Pods-Mammi-Parent.release.xcconfig"; sourceTree = "<group>"; };
+		1606789B218722B500645A58 /* ReportSubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSubjectTableViewCell.swift; sourceTree = "<group>"; };
+		1606789D2187373C00645A58 /* PopUpPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpPickerViewController.swift; sourceTree = "<group>"; };
 		160EC68E216BD1840099F149 /* Mammi-Parent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mammi-Parent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		160EC691216BD1840099F149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		160EC693216BD1840099F149 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -48,10 +53,11 @@
 		160EC6A6216BD86D0099F149 /* RemachineScript_Personal_Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RemachineScript_Personal_Use.ttf; path = ../../../../Downloads/remachine_script/RemachineScript_Personal_Use.ttf; sourceTree = "<group>"; };
 		16188C0C216BF71300699F3D /* RoundedShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShapes.swift; sourceTree = "<group>"; };
 		161CD6A02177681C00146E3D /* TheEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheEventViewController.swift; sourceTree = "<group>"; };
+		16306A5821860C5B00FD5DB2 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		1654FC6D217C8B17004C3582 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		1654FC6F217C9313004C3582 /* AlbumsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCollectionViewController.swift; sourceTree = "<group>"; };
 		1654FC71217C99C4004C3582 /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
-		1654FC73217CCF7D004C3582 /* FullImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageCollectionViewController.swift; sourceTree = "<group>"; };
+		1654FC73217CCF7D004C3582 /* FullImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
 		1654FC75217CD115004C3582 /* AlbumPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		1654FC77217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		165D6AB121714B1200BDE83A /* Mammi-Parent-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mammi-Parent-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -136,7 +142,9 @@
 				161CD6A02177681C00146E3D /* TheEventViewController.swift */,
 				1654FC6F217C9313004C3582 /* AlbumsCollectionViewController.swift */,
 				1654FC75217CD115004C3582 /* AlbumPhotosCollectionViewController.swift */,
-				1654FC73217CCF7D004C3582 /* FullImageCollectionViewController.swift */,
+				1654FC73217CCF7D004C3582 /* FullImageViewController.swift */,
+				16306A5821860C5B00FD5DB2 /* ReportViewController.swift */,
+				1606789D2187373C00645A58 /* PopUpPickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 				16E7D3CA21760989000FE7F7 /* TheEventTableViewCell.swift */,
 				1654FC6D217C8B17004C3582 /* AlbumCollectionViewCell.swift */,
 				1654FC77217CD52E004C3582 /* AlbumPhotoCollectionViewCell.swift */,
+				1606789B218722B500645A58 /* ReportSubjectTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,12 +299,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mammi-Parent/Pods-Mammi-Parent-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
@@ -315,14 +326,16 @@
 				160EC696216BD1840099F149 /* SecondViewController.swift in Sources */,
 				16E7D3CB21760989000FE7F7 /* TheEventTableViewCell.swift in Sources */,
 				160EC692216BD1840099F149 /* AppDelegate.swift in Sources */,
+				16306A5921860C5B00FD5DB2 /* ReportViewController.swift in Sources */,
 				161CD6A12177681C00146E3D /* TheEventViewController.swift in Sources */,
 				16E7D3C921760941000FE7F7 /* EventsTableViewController.swift in Sources */,
 				1654FC6E217C8B17004C3582 /* AlbumCollectionViewCell.swift in Sources */,
 				16E7D3CD21760CFA000FE7F7 /* EventModel.swift in Sources */,
 				165D6AB421714B1700BDE83A /* SWRevealViewController.m in Sources */,
 				16E7D3C72175FC57000FE7F7 /* RoundedImages.swift in Sources */,
+				1606789E2187373C00645A58 /* PopUpPickerViewController.swift in Sources */,
 				1654FC76217CD115004C3582 /* AlbumPhotosCollectionViewController.swift in Sources */,
-				1654FC74217CCF7D004C3582 /* FullImageCollectionViewController.swift in Sources */,
+				1654FC74217CCF7D004C3582 /* FullImageViewController.swift in Sources */,
 				160EC694216BD1840099F149 /* HomeViewController.swift in Sources */,
 				1654FC70217C9313004C3582 /* AlbumsCollectionViewController.swift in Sources */,
 				16A29397216CAAF700DFA3C6 /* LoginViewController.swift in Sources */,
@@ -330,6 +343,7 @@
 				1654FC72217C99C4004C3582 /* FolderModel.swift in Sources */,
 				16A29399216CC0C900DFA3C6 /* UserModel.swift in Sources */,
 				16F45A79217262DC000707D8 /* MyChildrenTableViewCell.swift in Sources */,
+				1606789C218722B500645A58 /* ReportSubjectTableViewCell.swift in Sources */,
 				16BE488A21727B5400F0F492 /* ChildModel.swift in Sources */,
 				16188C0D216BF71300699F3D /* RoundedShapes.swift in Sources */,
 			);

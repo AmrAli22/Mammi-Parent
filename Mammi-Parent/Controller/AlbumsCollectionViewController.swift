@@ -12,8 +12,9 @@ import SwiftyJSON
 
 
 
-class AlbumsCollectionViewController: UICollectionViewController , UICollectionViewDelegateFlowLayout {
+class AlbumsCollectionViewController: UICollectionViewController ,  UICollectionViewDelegateFlowLayout {
     
+   // @IBOutlet weak var collectionView: UICollectionView!
     private let reuseIdentifier = "AlbumCell"
     var complitionHandler: ((Bool)->Void)?
     var GalleryId = Int()
@@ -23,22 +24,17 @@ class AlbumsCollectionViewController: UICollectionViewController , UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        DispatchQueue.main.async {
-           self.getGalleryFoldersWithAlamofire()
-        }
-      
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: self.reuseIdentifier)
+        
+        self.getGalleryFoldersWithAlamofire()
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "RemachineScriptPersonalUse", size: 28 )!]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.strokeColor : #colorLiteral(red: 1, green: 0.4412012994, blue: 0.4056814313, alpha: 1) ]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.strokeColor : #colorLiteral(red: 0.851465404, green: 0.4157265425, blue: 0.3035841882, alpha: 1) ]
 
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        collectionView?.reloadData()
     }
     
 
@@ -50,7 +46,7 @@ class AlbumsCollectionViewController: UICollectionViewController , UICollectionV
     func DawnloadImage(url : String) -> UIImage   {
         
         let url = URL(string: url)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        let data = try? Data(contentsOf: url!)
         return UIImage(data: data!)!
     }
     
@@ -82,16 +78,12 @@ class AlbumsCollectionViewController: UICollectionViewController , UICollectionV
                             , _img: self.DawnloadImage(url: NextFolder["img"] as! String)
                             , _id: NextFolder["id"] as! Int
                               )
-                        
                         self.FoldersArray.append(ReceivedFolder)
                     }
-                    DispatchQueue.main.async {
                         self.collectionView?.reloadData()
-                    }
                 }
             }
         }
-      
     }
     
     
@@ -125,17 +117,20 @@ class AlbumsCollectionViewController: UICollectionViewController , UICollectionV
         if self.FoldersArray.isEmpty {
             self.collectionView?.reloadData()
         }else{
-            cell?.GonfigureCell(Albumtitle: (FoldersArray[indexPath.row]?.name)! ,
-                                AlbumImage: (FoldersArray[indexPath.row]?.img)!  )
-        
+            cell?.ConfigureCell(Albumtitle: (FoldersArray[indexPath.row]?.name)! ,
+                                AlbumImage: (FoldersArray[indexPath.row]?.img)!
+            )
             return cell!
         }
         return cell!
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let AlbumPhotos = AlbumPhotosCollectionViewController()
-        AlbumPhotos.CurrentAlbumID = (FoldersArray[indexPath.row]?.id)!
-        self.navigationController?.pushViewController(AlbumPhotos, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoGalleryPhotos" {
+            let indexpath = collectionView?.indexPathsForSelectedItems
+            let controller = segue.destination as! AlbumPhotosCollectionViewController
+            controller.CurrentAlbumID = (FoldersArray[(indexpath![0].row)]!.id)
+            
+        }
     }
 }

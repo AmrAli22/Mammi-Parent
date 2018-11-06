@@ -8,16 +8,17 @@
 
 import Foundation
 
-struct Child {
+struct Child: Codable {
+    
     let name : String
-    let img : UIImage
+    let imgURL : String
     let hadanaID : Int
     let hadanaName : String
     let childClass : String
     
-    init(_name : String , _img : UIImage , _hadanaID : Int ,_hadanaName : String , _childClass : String ) {
+    init(_name : String , _imgURL : String , _hadanaID : Int ,_hadanaName : String , _childClass : String ) {
         name = _name
-        img = _img
+        imgURL = _imgURL
         hadanaID = _hadanaID
         hadanaName = _hadanaName
         childClass = _childClass

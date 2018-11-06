@@ -12,4 +12,5 @@ target 'Mammi-Parent' do
   pod 'Alamofire'
   pod 'TextFieldEffects'
   pod 'SwiftyJSON'
+  pod 'Cosmos'
 end

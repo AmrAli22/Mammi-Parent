@@ -27,15 +27,22 @@ class HomeViewController: UIViewController , UIScrollViewDelegate {
     var offSet: CGFloat = 0
     var TestGalleryIDAlbums = [[String:AnyObject]]()
     var GalleryIDAlbums = Int()
-    let CurrentChildHadanaID = UserDefaults.standard.integer(forKey:"CurrentHadana")
+   
+   
 
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        let revVC = RevealTableViewController()
+        revVC.GetChildrenWithAlamoFire{ (complete) in
+            if complete {
+                self.CheckGalleryWithAlamoFire()
+            }
+        }
         RunBanner()
         ChildrenButtonActivation()
-        CheckGalleryWithAlamoFire()
+     //
         
         /// ///////RoundedButton
         
@@ -113,9 +120,24 @@ class HomeViewController: UIViewController , UIScrollViewDelegate {
     
     
     func CheckGalleryWithAlamoFire(){
-       let GetGalleryURL = "https://mymummy.herokuapp.com/api/v1/hadana/\(self.CurrentChildHadanaID)/galleries"
         
         let decoder = JSONDecoder()
+        let _CurrentChild = UserDefaults.standard.data(forKey: "CurrChild")
+        let CurrentChild = try? decoder.decode(Child.self, from: _CurrentChild!)
+       
+        /*
+         f let newValue = someValue {
+         print(newValue)
+         }
+         */
+        
+        let CurrentChildHadanaID = CurrentChild!.hadanaID
+            //
+        
+            let GetGalleryURL = "https://mymummy.herokuapp.com/api/v1/hadana/\(CurrentChildHadanaID)/galleries"
+            
+        
+       
         let _CurrentUser = UserDefaults.standard.data(forKey: "kUser")
         let CurrentUser = try? decoder.decode(user.self, from: _CurrentUser!)
         let CurrentUserToken = CurrentUser?._Token
@@ -133,12 +155,12 @@ class HomeViewController: UIViewController , UIScrollViewDelegate {
             print (responseData)
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
-                print(swiftyJsonVar)
+              //  print(swiftyJsonVar)
                 if let resData = swiftyJsonVar["data"].arrayObject {
                     self.TestGalleryIDAlbums = resData as! [[String:AnyObject]]
                     self.GalleryIDAlbums = (self.TestGalleryIDAlbums[0]["id"] as! Int)
                 
-                    print("GalleryIDSArraay\(self.GalleryIDAlbums)")
+                   // print("GalleryIDSArraay\(self.GalleryIDAlbums)")
                     if self.GalleryIDAlbums == 0 {
                         self.BtnGallery?.isHidden = true
                     } else {
