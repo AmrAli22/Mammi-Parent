@@ -2,7 +2,7 @@
 //  AlbumsCollectionViewController.swift
 //  Mammi-Parent
 //
-//  Created by Sayed Abdo on 10/21/18.
+//  Created by Amr Ali on 10/21/18.
 //  Copyright © 2018 Hamza. All rights reserved.
 //
 
